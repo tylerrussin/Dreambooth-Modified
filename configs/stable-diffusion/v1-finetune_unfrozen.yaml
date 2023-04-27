@@ -85,7 +85,7 @@ data:
         size: 512
         set: train
         per_image_tokens: false
-        repeats: 100
+        repeats: 70
     reg:
       target: ldm.data.personalized.PersonalizedBase
       params:
@@ -93,7 +93,7 @@ data:
         set: train
         reg: true
         per_image_tokens: false
-        repeats: 10
+        repeats: 1
         
     validation:
       target: ldm.data.personalized.PersonalizedBase
@@ -101,7 +101,7 @@ data:
         size: 512
         set: val
         per_image_tokens: false
-        repeats: 10
+        repeats: 1
 
 lightning:
   modelcheckpoint:
@@ -117,4 +117,4 @@ lightning:
 
   trainer:
     benchmark: True
-    max_steps: 3000
+    max_steps: 11900
